@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Digital Twin</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/cesium@1.120.0/Build/Cesium/Widgets/widgets.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <div id="toolbar">
+        <h1>Earth Digital Twin</h1>
+        <p>Zoom from orbit to street scale with free global map data.</p>
+        <div class="actions">
+          <button data-view="orbit">Orbit</button>
+          <button data-view="continent">Continent</button>
+          <button data-view="city">City</button>
+          <button data-view="street">Street</button>
+        </div>
+
+        <div id="orbital-controls" class="orbital-controls" aria-live="polite">
+          <label>
+            <input id="atmoCloudToggle" type="checkbox" checked />
+            Dynamic clouds + atmospheric simulation
+          </label>
+        </div>
+
+        <p class="hint">Tip: Hold right mouse + drag to tilt and rotate in 3D.</p>
+      </div>
+      <div id="cesiumContainer" role="application" aria-label="3D Earth visualization"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
